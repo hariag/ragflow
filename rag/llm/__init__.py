@@ -45,6 +45,7 @@ from .embedding_model import (
     HuggingFaceEmbed,
     VolcEngineEmbed,
     GPUStackEmbed,
+    AIStackEmbed,
 )
 from .chat_model import (
     GptTurbo,
@@ -85,6 +86,7 @@ from .chat_model import (
     GoogleChat,
     HuggingFaceChat,
     GPUStackChat,
+    AIStackChat,
     ModelScopeChat,
 )
 
@@ -124,6 +126,7 @@ from .rerank_model import (
     VoyageRerank,
     QWenRerank,
     GPUStackRerank,
+    AIStackRerank,
     HuggingfaceRerank,
 )
 
@@ -134,6 +137,7 @@ from .sequence2txt_model import (
     XinferenceSeq2txt,
     TencentCloudSeq2txt,
     GPUStackSeq2txt,
+    AIStackSeq2txt,
 )
 
 from .tts_model import (
@@ -143,6 +147,7 @@ from .tts_model import (
     SparkTTS,
     XinferenceTTS,
     GPUStackTTS,
+    AIStackTTS,
 )
 
 EmbeddingModel = {
@@ -176,6 +181,7 @@ EmbeddingModel = {
     "HuggingFace": HuggingFaceEmbed,
     "VolcEngine": VolcEngineEmbed,
     "GPUStack": GPUStackEmbed,
+    "AIStack": AIStackEmbed,
 }
 
 CvModel = {
@@ -239,6 +245,7 @@ ChatModel = {
     "Google Cloud": GoogleChat,
     "HuggingFace": HuggingFaceChat,
     "GPUStack": GPUStackChat,
+    "AIStack": AIStackChat,
     "ModelScope":ModelScopeChat,
 }
 
@@ -259,6 +266,7 @@ RerankModel = {
     "Voyage AI": VoyageRerank,
     "Tongyi-Qianwen": QWenRerank,
     "GPUStack": GPUStackRerank,
+    "AIStack": AIStackRerank,
     "HuggingFace": HuggingfaceRerank,
 }
 
@@ -269,6 +277,7 @@ Seq2txtModel = {
     "Xinference": XinferenceSeq2txt,
     "Tencent Cloud": TencentCloudSeq2txt,
     "GPUStack": GPUStackSeq2txt,
+    "AIStack": AIStackSeq2txt,
 }
 
 TTSModel = {
@@ -278,4 +287,5 @@ TTSModel = {
     "XunFei Spark": SparkTTS,
     "Xinference": XinferenceTTS,
     "GPUStack": GPUStackTTS,
+    "AIStack": AIStackTTS,
 }

@@ -3306,6 +3306,13 @@
             "tags": "LLM,TEXT EMBEDDING,TTS,SPEECH2TEXT,TEXT RE-RANK",
             "status": "1",
             "llm": []
+        },
+        {
+            "name": "AIStack",
+            "logo": "",
+            "tags": "LLM,TEXT EMBEDDING,TTS,SPEECH2TEXT,TEXT RE-RANK",
+            "status": "1",
+            "llm": []
         }
     ]
 }

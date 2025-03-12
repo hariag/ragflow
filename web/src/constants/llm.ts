@@ -1,4 +1,5 @@
 export enum LLMFactory {
+  AIStack = 'AIStack',
   TongYiQianWen = 'Tongyi-Qianwen',
   Moonshot = 'Moonshot',
   OpenAI = 'OpenAI',
@@ -102,5 +103,6 @@ export const IconMap = {
   [LLMFactory.JinaAI]: 'jina',
   [LLMFactory.SentenceTransformers]: 'sentence-transformers',
   [LLMFactory.GPUStack]: 'gpustack',
+  [LLMFactory.AIStack]: 'aistack',
   [LLMFactory.VLLM]: 'vllm',
 };

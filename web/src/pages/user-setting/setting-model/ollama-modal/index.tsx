@@ -35,6 +35,7 @@ const llmFactoryToUrlMap = {
   [LLMFactory.HuggingFace]:
     'https://huggingface.co/docs/text-embeddings-inference/quick_tour',
   [LLMFactory.GPUStack]: 'https://docs.gpustack.ai/latest/quickstart',
+  [LLMFactory.AIStack]: 'https://docs.xxx.xxx/latest/quickstart',
   [LLMFactory.VLLM]: 'https://docs.vllm.ai/en/latest/',
 };
 type LlmFactory = keyof typeof llmFactoryToUrlMap;
@@ -86,6 +87,13 @@ const OllamaModal = ({
     ],
     [LLMFactory.ModelScope]: [{ value: 'chat', label: 'chat' }],
     [LLMFactory.GPUStack]: [
+      { value: 'chat', label: 'chat' },
+      { value: 'embedding', label: 'embedding' },
+      { value: 'rerank', label: 'rerank' },
+      { value: 'speech2text', label: 'sequence2text' },
+      { value: 'tts', label: 'tts' },
+    ],
+    [LLMFactory.AIStack]: [
       { value: 'chat', label: 'chat' },
       { value: 'embedding', label: 'embedding' },
       { value: 'rerank', label: 'rerank' },

@@ -33,6 +33,7 @@ export const LocalLlmFactories = [
   LLMFactory.OpenRouter,
   LLMFactory.HuggingFace,
   LLMFactory.GPUStack,
+  LLMFactory.AIStack,
   LLMFactory.ModelScope,
   LLMFactory.VLLM,
 ];
