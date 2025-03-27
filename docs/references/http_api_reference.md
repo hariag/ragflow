@@ -9,6 +9,22 @@ A complete reference for RAGFlow's RESTful API. Before proceeding, please ensure
 
 ---
 
+## ERROR CODES
+
+---
+
+| Code | Message               | Description                |
+|------|-----------------------|----------------------------|
+| 400  | Bad Request           | Invalid request parameters |
+| 401  | Unauthorized          | Unauthorized access        |
+| 403  | Forbidden             | Access denied              |
+| 404  | Not Found             | Resource not found         |
+| 500  | Internal Server Error | Server internal error      |
+| 1001 | Invalid Chunk ID      | Invalid Chunk ID           |
+| 1002 | Chunk Update Failed   | Chunk update failed        |
+
+---
+
 ## OpenAI-Compatible API
 
 ---
@@ -49,13 +65,13 @@ curl --request POST \
 
 ##### Request Parameters
 
-- `model` (*Body parameter*) `string`, *Required*
+- `model` (*Body parameter*) `string`, *Required*  
   The model used to generate the response. The server will parse this automatically, so you can set it to any value for now.
 
-- `messages` (*Body parameter*) `list[object]`, *Required*
+- `messages` (*Body parameter*) `list[object]`, *Required*  
   A list of historical chat messages used to generate the response. This must contain at least one message with the `user` role.
 
-- `stream` (*Body parameter*) `boolean`
+- `stream` (*Body parameter*) `boolean`  
   Whether to receive the response as a stream. Set this to `false` explicitly if you prefer to receive the entire response in one go instead of as a stream.
 
 #### Response
@@ -528,24 +544,6 @@ Failure:
     "message": "The dataset doesn't exist"
 }
 ```
-
----
-
-## Error Codes
-
----
-
-| Code | Message               | Description                |
-| ---- | --------------------- | -------------------------- |
-| 400  | Bad Request           | Invalid request parameters |
-| 401  | Unauthorized          | Unauthorized access        |
-| 403  | Forbidden             | Access denied              |
-| 404  | Not Found             | Resource not found         |
-| 500  | Internal Server Error | Server internal error      |
-| 1001 | Invalid Chunk ID      | Invalid Chunk ID           |
-| 1002 | Chunk Update Failed   | Chunk update failed        |
-
----
 
 ---
 
@@ -1771,7 +1769,7 @@ Lists chat assistants.
 #### Request
 
 - Method: GET
-- URL: `/api/v1/chats?page={page}&page_size={page_size}&orderby={orderby}&desc={desc}&name={dataset_name}&id={dataset_id}`
+- URL: `/api/v1/chats?page={page}&page_size={page_size}&orderby={orderby}&desc={desc}&name={chat_name}&id={chat_id}`
 - Headers:
   - `'Authorization: Bearer <YOUR_API_KEY>'`
 
@@ -1779,7 +1777,7 @@ Lists chat assistants.
 
 ```bash
 curl --request GET \
-     --url http://{address}/api/v1/chats?page={page}&page_size={page_size}&orderby={orderby}&desc={desc}&name={dataset_name}&id={dataset_id} \
+     --url http://{address}/api/v1/chats?page={page}&page_size={page_size}&orderby={orderby}&desc={desc}&name={chat_name}&id={chat_id} \
      --header 'Authorization: Bearer <YOUR_API_KEY>'
 ```
 
